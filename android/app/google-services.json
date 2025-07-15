@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286420542431",
+    "project_id": "la-italianu-b9a12",
+    "storage_bucket": "la-italianu-b9a12.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286420542431:android:a3cebcad0bee776b091a6a",
+        "android_client_info": {
+          "package_name": "com.example.la_italianu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWV_QDLmPwxypg9Q1uHWO48o7qXXgtMow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

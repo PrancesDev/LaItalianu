@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="io.flutter.plugins.firebase.auth.android.firebase_auth" target="23" />
+      <module name="io.flutter.plugins.firebase.core.android.firebase_core" target="23" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+workflows:
+  ios-build:
+    name: Build iOS IPA
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      # 1. Get your Dart deps
+      - flutter pub get
+      # 2. Install CocoaPods (on Codemagic's Mac)
+      - cd ios && pod install && cd ..
+      # 3. Build & sign the .ipa
+      - flutter build ipa --release
+    artifacts:
+      # grab the generated IPA
+      - build/ios/ipa/*.ipa
+
+# (optional) automatically trigger on pushes to master or main
+triggers:
+  - event: push
+    branch: master   # or `main`

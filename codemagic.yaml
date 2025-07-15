@@ -13,4 +13,4 @@ workflows:
 
 triggers:
   - event: push
-    branch: master   # use your actual default branch name
+    branch: main   # use your actual default branch name

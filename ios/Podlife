@@ -1,0 +1,38 @@
+# Uncomment to set a global platform for your project
+platform :ios, '11.0'
+
+# CocoaPods analytics affects flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def flutter_root
+  generated_xcode_build_settings = File.expand_path(File.join('..','Flutter','Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcode_build_settings)
+    raise "#{generated_xcode_build_settings} must exist. Run flutter pub get first."
+  end
+  File.read(generated_xcode_build_settings).each_line do |line|
+    if line.start_with?('FLUTTER')
+      key, value = line.strip.split('=', 2)
+      puts "export #{key}=#{value}"
+    end
+  end
+end
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  # This will pull in all the Flutter pods (Engine, plugins, etc.)
+  install_all_flutter_pods(File.dirname(File.realpath(__FILE__)))
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+  end
+end

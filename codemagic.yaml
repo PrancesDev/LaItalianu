@@ -10,6 +10,7 @@ workflows:
       - flutter build ios --release --no-codesign
     artifacts:
       - build/ios/ipa/*.ipa
-    triggers:
-      - event: push
-        branch: main
+
+triggers:
+  - event: push
+    branch: master   # use your actual default branch name
